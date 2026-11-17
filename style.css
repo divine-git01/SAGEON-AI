@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 50% 35%, #24132f 0%, #100d16 45%, #08080b 100%);
+  color: #f5f0fa;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1150px;
+  margin: auto;
+  padding: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px;
+  border-bottom: 1px solid #30243a;
+}
+
+header h2 {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+header h2 span {
+  color: #c084fc;
+}
+
+header p {
+  color: #b98ae7;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+main {
+  max-width: 780px;
+  margin: 65px auto 0;
+  text-align: center;
+}
+
+.orb {
+  width: 175px;
+  height: 175px;
+  margin: 0 auto 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  font-weight: 800;
+  color: white;
+
+  background:
+    radial-gradient(circle at 30% 25%,
+      #ffffff 0%,
+      #edcaff 8%,
+      #c084fc 22%,
+      #9333ea 45%,
+      #581c87 70%,
+      #170b24 100%);
+
+  box-shadow:
+    0 0 25px #c084fc88,
+    0 0 65px #9333ea77,
+    0 0 120px #7e22ce44,
+    inset -15px -15px 30px #160a24;
+
+  animation: orbPulse 4s ease-in-out infinite;
+}
+
+@keyframes orbPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 25px #c084fc88,
+                0 0 65px #9333ea77;
+  }
+
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 45px #d8a7ffcc,
+                0 0 100px #9333eaaa;
+  }
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+main > p {
+  color: #aa9bb5;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.chat-box {
+  min-height: 190px;
+  max-height: 380px;
+  overflow-y: auto;
+  background: #15111b;
+  border: 1px solid #493354;
+  border-radius: 20px;
+  padding: 22px;
+  text-align: left;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 40px #00000066;
+}
+
+.message {
+  padding: 15px 18px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.bot {
+  background: #281b35;
+  border: 1px solid #583a70;
+}
+
+.user {
+  background: #382641;
+  text-align: right;
+  margin-left: 15%;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  background: #19141f;
+  border: 1px solid #513b60;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px #00000066;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 13px;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #887992;
+}
+
+button {
+  background: linear-gradient(135deg, #c084fc, #9333ea);
+  color: white;
+  border: none;
+  border-radius: 13px;
+  padding: 13px 22px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px #a855f799;
+}
+
+footer {
+  text-align: center;
+  color: #71647a;
+  font-size: 11px;
+  margin-top: 75px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 15px;
+  }
+
+  main {
+    margin-top: 55px;
+  }
+
+  .orb {
+    width: 135px;
+    height: 135px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  button {
+    padding: 12px;
+  }
+}
